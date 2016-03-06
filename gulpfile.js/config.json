@@ -1,0 +1,86 @@
+{
+  "project": {
+  	"domain": "dev.mikejfraser.com",
+  	"folder": "1_gulp_setup"
+  },
+  "root": {
+    "src": "src",
+    "prod": "production",
+	"dist": "dist"
+  },
+
+  "tasks": {
+
+    "browserSync": {
+      "open": false
+    },
+
+    "static": {
+      "src": "misc",
+      "prod": "./",
+	  "dist": "./"
+    },
+
+    "js": {
+      "src": "js",
+      "prod": "js",
+	  "dist": "js",
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "scss",
+      "prod": "css",
+	  "dist": "./",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": false
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "html": {
+      "src": "html",
+      "prod": "./",
+	  "dist": "./",
+      "dataFile": "data/global.json",
+	  "settings": {},
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "json"],
+      "excludeFolders": ["layouts", "shared", "macros", "data"]
+    },
+
+    "images": {
+      "src": "img",
+      "prod": "img",
+      "dist": "img",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "prod": "fonts",
+      "dist": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "iconFont": {
+      "src": "icons",
+      "prod": "fonts",
+      "dist": "fonts",
+      "sassDest": "generated",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "svgSprite": {
+      "src": "sprites",
+      "prod": "img",
+      "dist": "img",
+      "extensions": ["svg"]
+    }
+  }
+}
